@@ -37,8 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'blog',
+    'django.contrib.sites',
+ 	'blog',
+    'disqus',
 ]
+
+
+DISQUS_API_KEY = 'ZGemt4z8FxCjwLGtcNqJjkABdYLFnm6BFFHjnf7UlIJBYc4eqETE7V0Q8YznWQ78'
+DISQUS_WEBSITE_SHORTNAME = 'aimed'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'en-en'
 
 TIME_ZONE = 'Europe/Kiev'
 
@@ -116,8 +122,17 @@ USE_L10N = True
 USE_TZ = True
 
 
+SITE_ID = 1
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+
