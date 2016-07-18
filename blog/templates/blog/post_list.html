@@ -1,5 +1,5 @@
- {% load staticfiles %}
  {% extends 'blog/base.html' %}
+  {% load staticfiles %}
  {% block content %}
     {% for post in object_list %}
         <p>{{ post.published_date }}</p>
